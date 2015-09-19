@@ -1,2 +1,1 @@
-# enhancedRequire
-Extend node require to require multiple module one time
+http://bahmutov.calepin.co/hacking-node-require.html
