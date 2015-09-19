@@ -1,5 +1,5 @@
 {
-    "name": "enhanced_require",
+    "name": "esrequire",
     "version": "0.1.0",
     "description": "add more feature to node require",
     "main": "./index.js",
