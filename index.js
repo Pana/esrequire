@@ -4,7 +4,6 @@ let fs = require('fs');
 let path = require('path');
 
 let _require = Module.prototype.require;
-let _resolve = Module._resolveFilename;
 let ParameterLackError = new Error('Module parameter is required');
 
 Module.prototype.require = enhanceRequire;
@@ -20,12 +19,10 @@ function enhanceRequire(names) {
     if (Array.isArray(names)) {
         result = {};
         for (let n of names) {
-            let nameToLoad = _resolve(n, this);
-            result[n] = _require.call(this, nameToLoad);
+            result[n] = _require.call(this, n);
         }
     } else {
-        let nameToLoad = _resolve(names, this);
-        result = _require.call(this, nameToLoad);
+        result = _require.call(this, names);
     }
     return result;
 };
@@ -41,12 +38,10 @@ function requireArray(names) {
     if (Array.isArray(names)) {
         result = [];
         for (let n of names) {
-            let nameToLoad = _resolve(n, this);
-            result.push(_require.call(this, nameToLoad));
+            result.push(_require.call(this, n));
         }
     } else {
-        let nameToLoad = _resolve(names, this);
-        result = _require.call(this, nameToLoad);
+        result = _require.call(this, names);
     }
     return result;
 }
