@@ -32,3 +32,10 @@ There is an global requireArray method which will return modules in an array.
 
 Note: to learn destructuring check [here](http://www.2ality.com/2015/01/es6-destructuring.html)
 
+
+### TODO 
+
+Add local require
+
+参考其他模块 xrequire
+
