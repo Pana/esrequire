@@ -1,6 +1,6 @@
 {
   "name": "esrequire",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "add more feature to node require",
   "main": "./index.js",
   "repository": {
