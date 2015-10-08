@@ -35,7 +35,7 @@ This seems not a big deal, but if you use it with ES6 desctructuring, it will be
     let [express, co, koa] = require(['express', 'co', 'koa']);
 
     // rename module 
-    let {'body-parser': bodyParser, koa} = require('body-parser, koa');
+    let {'body-parser': bodyParser, koa} = require('body-parser koa');
     let [bodyParser] = require(['body-parser']);
 
     // only require what you need
