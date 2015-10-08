@@ -35,7 +35,7 @@ This seems not a big deal, but if you use it with ES6 desctructuring, it will be
     let [express, co, koa] = require(['express', 'co', 'koa']);
 
     // rename module 
-    let {'body-parser': bodyParser} = require('body-parser');
+    let {'body-parser': bodyParser, koa} = require('body-parser, koa');
     let [bodyParser] = require(['body-parser']);
 
     // only require what you need
@@ -44,7 +44,7 @@ This seems not a big deal, but if you use it with ES6 desctructuring, it will be
 
 Note: to learn destructuring check [here](http://www.2ality.com/2015/01/es6-destructuring.html)
 
-This module has export an object `esRequire` to `global`, it provide some handy require method, for example folder require
+This module also has export an object `esRequire` to `global`, it provide some handy require method, for example folder require
 
 ```js
     // require all the files in one folder.
